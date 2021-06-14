@@ -1,6 +1,6 @@
 // import React, {useState, useEffect} from 'react'
 import Product from '../components/Product'
-import { useEffect } from 'react'
+// import { useEffect } from 'react'
 import { fetchData } from '../redux/CoffeShop/actions'
 
 import { connect } from 'react-redux'

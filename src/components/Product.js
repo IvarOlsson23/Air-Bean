@@ -1,8 +1,8 @@
 // import React, {useState, useEffect} from 'react'
 import './Products.css'
 import {connect} from 'react-redux';
-import { useEffect } from 'react'
-import { fetchData } from '../redux/CoffeShop/actions'
+// import { useEffect } from 'react'
+// import { fetchData } from '../redux/CoffeShop/actions'
 import {addToCart} from '.././redux/CoffeShop/actions'
 
 const Product = ({ productData, addToCart, fetchData  }) => {
