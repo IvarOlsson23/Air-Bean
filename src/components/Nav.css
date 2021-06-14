@@ -1,0 +1,27 @@
+.nav {
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 110px;
+  background-image: url("header.png");
+}
+
+.nav-links {
+  display: flex;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  font-size: 18px;
+  margin: 5px;
+  background-color: black;
+  color: white;
+}
+
+.cartCounter {
+  color: red;
+}
+
+

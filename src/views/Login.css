@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap");
+
+.login-main {
+  background-color: #f3e4e1;
+  border-radius: 0.2rem;
+  height: 80vh;
+  color: #2f2926;
+  display: flex;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.login-main-inside {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header h2 {
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.header p {
+  font-family: "Work Sans";
+  font-size: 16px;
+}
+
+button {
+  background-color: #2f2926;
+  color: #f3e4e1;
+  border-radius: 10px;
+  border-style: none;
+  height: 55px;
+  width: 250px;
+  font-size: 24px;
+  font-family: "PT Serif";
+}

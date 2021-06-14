@@ -1,0 +1,18 @@
+.about-main {
+  color: #ffffff;
+  margin: 40px;
+  text-align: left;
+}
+
+.about-main p {
+  font-family: "Work Sans";
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}
+
+.vd {
+  text-align: center;
+}
