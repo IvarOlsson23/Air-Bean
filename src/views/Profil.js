@@ -1,42 +1,56 @@
 import './Profil.css'
-const Profil = () => {
+import {connect} from 'react-redux'
+import { useEffect, useState } from 'react'
+// import { useState } from 'react'
+const Profil = ({LoginCreds}) => {
+
+    console.log(LoginCreds[0],'Från LoginCreds')
+    useEffect(() => {
+            fetchItems()
+        },[]);
+
+    const [items, setItems] = useState([]);
+
+    //Dynamiskt fetcha med det inloggade USER ID:t.
+    const fetchItems = async () => {
+        const data = await fetch('http://localhost:5000/api/order/zhmEi70WSxPtJYMFxgKuK')
+
+        let items = await data.json();
+        console.log(items,'från Profil');
+        setItems(items)
+    };
+
+
 
     return (
         <div className="main">
             <div>
                 <img src="" alt="profil-avatar" />
-                <h2>Sixten Kaffsson</h2>
-                <p>sixten.kaffsson@zocom.se</p>
+                <h2>{LoginCreds[0].name}</h2>
+                <p>{LoginCreds[0].epost}</p>
             </div>
+
+  
+        <div className="produkt-wrapper">
+        </div>
             <div>
                 <h3>OrderHistorik</h3>
-                <ul>
-                    <li>
-                        <div>
-                            <span>#1245125</span>
-                            <span>Total ordersummar</span>
-                        </div>
-                    </li>
-                           <li>
-                        <div>
-                            <span>#1245125</span>
-                            <span>Total ordersummar</span>
-                        </div>
-                    </li>
-                           <li>
-                        <div>
-                            <span>#1245125</span>
-                            <span>Total ordersummar</span>
-                        </div>
-                    </li>
-                    <div>
-                        <span>Totalt spenderat</span>
-                        <span> 1849kr</span>
-                    </div>
-                </ul>
+            {items.map(item =>(
+                <span className="produkt" key={item.ordernummer}>
+                    <p className="ordernummer">{item.ordernummer}</p>
+                    <p>{item.ordertime}</p>                   
+                </span>
+            ))}
+
             </div>
         </div>
     )
 }
 
-export default Profil
+const mapStateToProps = (state) => {
+    return {
+        LoginCreds: state.shop.user
+    }
+}
+
+export default  connect(mapStateToProps)(Profil);

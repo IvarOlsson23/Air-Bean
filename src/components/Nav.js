@@ -1,7 +1,10 @@
 import './Nav.css';
 import {Link} from 'react-router-dom';
 import React, {useState, useEffect} from 'react'
-
+import Navlinks from './Navlinks';
+import { CgMenuRound } from 'react-icons/cg';
+import {CgCloseO} from 'react-icons/cg'
+import {FaShoppingCart} from 'react-icons/fa'
 import {connect} from 'react-redux';
 
 
@@ -18,24 +21,24 @@ const Nav = ({cart}) => {
             setCartCounter(count);
         },[cart, cartCounter]);
     
+        const [open, setOpen] = useState(false);
+
+        const hamburgerIcon = <CgMenuRound className="hamburger" onClick={() => setOpen(!open)}/>
+
+        const closeIcon = <CgCloseO className="hamburger" onClick={() => setOpen(!open)}/>
+
+
+
+
     return (
         <nav className="nav">
-            <ul className="nav-links">
-                <Link to="/Menu">
-                    <li>Meny</li>
-                </Link>
-                <Link to="/About">
-                    <li>Vårt kaffe</li>
-                </Link>
-                <Link to="/Profil">
-                    <li>Min Profil</li>
-                </Link>
-                <Link to="/Orderstatus">
-                    <li>Orderstatus</li>
-                </Link>
+            <ul>
+                {open ? closeIcon : hamburgerIcon}
+               { open && <Navlinks/> }
                 <Link to="/Cart">
-                    <div className="cartCounter">{cartCounter}</div>
-                    <li>Cart</li>
+                    <div className="cart-background" />
+                        <div className="cartCounter">{cartCounter}</div>
+                        <FaShoppingCart className="cart-icon"/>
                 </Link>
             </ul>
         </nav>

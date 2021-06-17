@@ -37,4 +37,15 @@ button {
   width: 250px;
   font-size: 24px;
   font-family: "PT Serif";
+  margin-top: 2rem;
+}
+
+.input-text {
+  height: 30px;
+  margin: 3px;
+  width: 95%;
+  outline: none;
+  border: ridge;
+  border-radius: 10px;
+  background: #f3e4e1;
 }

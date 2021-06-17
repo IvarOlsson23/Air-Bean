@@ -1,3 +1,33 @@
 .final-btn {
-  background-color: rgb(173, 30, 30);
+  background-color: #2f2926;
+  border-radius: 30px;
+}
+
+.main-cart {
+  height: 80vh;
+  color: black;
+  background-color: white;
+  margin: 0.5rem;
+}
+
+.cart-produkt {
+  margin: 2rem;
+}
+
+.cart-name-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-price {
+  text-align: left;
+  margin-right: 90%;
+  font-size: 11px;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+  font-size: 1.5rem;
 }

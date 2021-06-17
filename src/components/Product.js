@@ -1,37 +1,39 @@
 // import React, {useState, useEffect} from 'react'
 import './Products.css'
 import {connect} from 'react-redux';
-// import { useEffect } from 'react'
+import { useEffect } from 'react'
 // import { fetchData } from '../redux/CoffeShop/actions'
 import {addToCart} from '.././redux/CoffeShop/actions'
+import {AiFillPlusCircle} from 'react-icons/ai'
+import { fetchData } from '../redux/CoffeShop/actions'
 
-const Product = ({ productData, addToCart, fetchData  }) => {
+const Product = ({ productData, addToCart, fetchUsers  }) => {
 
   
-  // useEffect(() => {
-  //   fetchData()
-  // })
+  useEffect(() => {
+    fetchData()
+  },[])
 
     return (
         <div className="produkt-wrapper">
-            <button className="add-btn" onClick={() => addToCart(productData.id)}>+</button>
-            <span>{productData.title}</span>
-            <span> {productData.price}kr</span> <br/>
-            <span>{productData.desc}</span>
+            <div className="price-name-div">
+              <AiFillPlusCircle className="add-btn" onClick={() =>  addToCart(productData.id)}/>
+
+              <span className="meny-title">{productData.title}</span>....
+              <span className="meny-price"> {productData.price}kr</span>
+            </div>
+              <span className="meny-desc">{productData.desc}</span>
+            
         </div>
     )
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addToCart:(id) => dispatch(addToCart(id))
+    addToCart:(id) => dispatch(addToCart(id)),
+    fetchData: () => dispatch(fetchData())
   };
 };
-// const mapDispatchToProps2 = dispatch => {
-//     return {
-//         fetchData: () => dispatch(fetchData())
-//     }
-// }
 
 
 export default connect(null, mapDispatchToProps)(Product);

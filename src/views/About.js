@@ -1,6 +1,9 @@
 import './About.css'
 
-const about = () => {
+const About = (props) => {
+
+
+
     return (
         <div className="about-main">
             <h2>Vårt kaffe</h2>
@@ -14,8 +17,9 @@ const about = () => {
             </div>
 
             <img src="footer.png" alt="test" />
+
         </div>
     )
 }
 
-export default about
+export default About

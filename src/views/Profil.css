@@ -1,6 +1,7 @@
 .main {
   display: flex;
-  height: 80vh;
+  margin-top: 3rem;
   flex-direction: column;
   justify-content: space-evenly;
+  height: 73vh;
 }

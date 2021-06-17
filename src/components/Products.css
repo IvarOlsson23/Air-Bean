@@ -1,8 +1,23 @@
-.produkt {
-  display: flex;
-  justify-content: space-around;
+.produkt-wrapper {
+  padding: 1rem;
+  text-align: left;
+  margin-left: 1rem;
 }
 
 .add-btn {
-  width: 50px;
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
+
+.meny-title {
+  font-size: 1.5rem;
+}
+
+.meny-desc {
+  font-size: 0.7rem;
+  margin-left: 2.5rem;
+}
+
+.meny-price {
+  text-align: right;
 }

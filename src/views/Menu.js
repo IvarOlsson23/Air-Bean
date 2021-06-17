@@ -1,16 +1,36 @@
-// import React, {useState, useEffect} from 'react'
+
 import Product from '../components/Product'
-// import { useEffect } from 'react'
 import { fetchData } from '../redux/CoffeShop/actions'
-
+import { fetchTodos } from '../Alternativ-Fetch/todoApi';
 import { connect } from 'react-redux'
+// import React, {useEffect } from 'react';
 
-const Menu = ({ fetchData, stateProducts }) => {
+// import { useSelector, useDispatch } from 'react-redux';
+
+const Menu = ({props, fetchData, stateProducts }) => {
+console.log(stateProducts,'from Menu')
+
+//   const todos = useSelector(state => state.shop.todos);
+//     const dispatch = useDispatch();
 
 
+    // useEffect(() => {
+    //     dispatch(fetchTodos());
+    // }, [])
 
     return (
         <div>
+            
+                {/* <article className="todo-app">
+            <ul className="todo-list">
+                     {todos.map(item =>(
+                <span className="produkt" key={item.name}>
+                    <h2>{item.name} .....</h2> 
+                </span>
+            ))}
+            </ul>
+        </article> */}
+            <h2 >Meny</h2>
             {stateProducts.map(prod => (
                 <Product key={prod.id} productData={prod}/>
             ))}

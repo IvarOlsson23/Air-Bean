@@ -1,27 +1,36 @@
 .nav {
   margin: 0;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   height: 110px;
   background-image: url("header.png");
 }
 
-.nav-links {
-  display: flex;
-  padding: 0;
-}
-
-li {
-  list-style: none;
-  font-size: 18px;
-  margin: 5px;
-  background-color: black;
-  color: white;
-}
-
 .cartCounter {
-  color: red;
+  color: rgb(240, 46, 152);
+  font-size: 1.5rem;
+  font-weight: 600;
+  position: absolute;
+  right: 5%;
+  top: 2%;
+  z-index: 1;
 }
 
+.hamburger {
+  position: absolute;
+  left: 5%;
+  cursor: pointer;
+  font-size: 2.5rem;
+  top: 3%;
+  z-index: 1;
+}
 
+.cart-icon {
+  color: rgb(46, 46, 46);
+  font-size: 2rem;
+  position: absolute;
+  top: 4%;
+  right: 6%;
+}
+
+.cart-background {
+}

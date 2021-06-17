@@ -5,8 +5,9 @@ import {connect} from 'react-redux';
 import {saveUser} from '.././redux/CoffeShop/actions'
 
 
-const Login = () => {
+const Login = ({saveUser}) => {
 
+    //Skicka med user INPUT och lägg till användare i servern //KLART
     const url = "http://localhost:5000/api/accounts"
     const [data, setData] = useState({
         name: "",
@@ -43,12 +44,12 @@ const Login = () => {
 
                 <form onSubmit={(e) => submit(e)} >
                 
-                    <input onChange={(e) => handle(e)} id="name" value={data.name} type="text" placeholder="Namn" />
+                    <input className="input-text" onChange={(e) => handle(e)} id="name" value={data.name} type="text" placeholder="Namn" />
                   
-                    <input onChange={(e) => handle(e)} id="epost" value={data.epost} type="text" placeholder="Epost" /> <br />
+                    <input className="input-text" onChange={(e) => handle(e)} id="epost" value={data.epost} type="text" placeholder="Epost" /> <br />
                  
                     <input type="checkbox"/> GDPR
-                    <button onClick={saveUser} className="loggin">Logga in</button>
+                    <button onClick={() => saveUser(data.name, data.epost)} className="loggin">Logga in</button>
                 </form>
             </div>
         </div>
@@ -57,8 +58,8 @@ const Login = () => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    saveUser:(userName) => dispatch(saveUser(userName))
+    saveUser:(name) => dispatch(saveUser(name)),
   };
 };
 
-export default connect(mapDispatchToProps)(Login);
+export default connect(null, mapDispatchToProps)(Login);

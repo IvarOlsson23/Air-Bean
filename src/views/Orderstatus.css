@@ -1,0 +1,17 @@
+.orderstatus-main {
+  background-color: #e5674e;
+  height: 65vh;
+  padding: 3rem;
+}
+
+.order-nummer {
+  margin-top: rem;
+}
+
+.cool-btn {
+  background-color: rgb(238, 235, 235);
+  color: rgb(0, 0, 0);
+  width: 140px;
+  border-radius: 25px;
+  font-weight: 600;
+}

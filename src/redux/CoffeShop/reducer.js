@@ -5,7 +5,8 @@ import * as actionTypes from './types';
 
 
 const initState = {
-    stateProducts: [{
+    stateProducts: [
+    {
       "id": 1,
       "title": "Bryggkaffe",
       "desc": "Bryggd på månadens bönor.",
@@ -42,7 +43,16 @@ const initState = {
       "price": 39
     }],
     cart: [],
-    user: [],
+    user: [
+    {
+      "name": "testTorsdag",
+      "epost": "torsdag@test.se",
+      "id": "G4JHGNEfM2pdyxeW6XGMb",
+      "password": "9RtoWrpmXp"
+    },
+
+],
+todos: [],
 }
 
 
@@ -62,18 +72,18 @@ const Reducers = (state = initState, action) => {
             };
 
 
-        case actionTypes.REMOVE_FROM_CART:
-            return {
-                ...state,
-                cart: state.cart.filter(item => item.id !== action.payload.id)
-            };
+        // case actionTypes.REMOVE_FROM_CART:
+        //     return {
+        //         ...state,
+        //         cart: state.cart.filter(item => item.id !== action.payload.id)
+        //     };
 
 
-        case actionTypes.ADJUST_QTY:
-            return {
-                ...state,
-                cart: state.cart.map(item => item.id === action.payload.id ? {...item, qty: action.payload.qty} : item)
-            };
+        // case actionTypes.ADJUST_QTY:
+        //     return {
+        //         ...state,
+        //         cart: state.cart.map(item => item.id === action.payload.id ? {...item, qty: action.payload.qty} : item)
+        //     };
 
         case actionTypes.SAVE_USER:
           return {
@@ -84,13 +94,10 @@ const Reducers = (state = initState, action) => {
           case actionTypes.FETCH_DATA_SUCCESS:
               return {
                   ...state,
-                  loading: false,
-                  stateProducts: action.payload,
-                  error: ''
+                  stateProducts: action.payload
+                //    stateProducts: action.payload
               }
 
-
-            
         default:
             return state;
             
