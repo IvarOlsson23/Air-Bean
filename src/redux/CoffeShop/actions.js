@@ -41,22 +41,13 @@ export const saveUser = (userName) => {
     }
 }
 
-export const fetchDataRequest = () => {
-    return {
-        type: actionTypes.FETCH_DATA_REQUEST
-    }
-}
+
 export const fetchDataSuccess = (data) => {
     
     return {
         type: actionTypes.FETCH_DATA_SUCCESS,
         payload: data
         
-    }
-}
-export const fetchDataFailure = error => {
-    return {
-        type: actionTypes.FETCH_DATA_FAILURE
     }
 }
 

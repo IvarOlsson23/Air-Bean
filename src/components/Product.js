@@ -1,8 +1,8 @@
 // import React, {useState, useEffect} from 'react'
+// import { fetchData } from '../redux/CoffeShop/actions'
 import './Products.css'
 import {connect} from 'react-redux';
 import { useEffect } from 'react'
-// import { fetchData } from '../redux/CoffeShop/actions'
 import {addToCart} from '.././redux/CoffeShop/actions'
 import {AiFillPlusCircle} from 'react-icons/ai'
 import { fetchData } from '../redux/CoffeShop/actions'

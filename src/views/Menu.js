@@ -1,8 +1,8 @@
 
 import Product from '../components/Product'
 import { fetchData } from '../redux/CoffeShop/actions'
-import { fetchTodos } from '../Alternativ-Fetch/todoApi';
 import { connect } from 'react-redux'
+// import { fetchMenu } from '../Alternativ-Fetch/todoApi';
 // import React, {useEffect } from 'react';
 
 // import { useSelector, useDispatch } from 'react-redux';
@@ -15,7 +15,7 @@ console.log(stateProducts,'from Menu')
 
 
     // useEffect(() => {
-    //     dispatch(fetchTodos());
+    //     dispatch(fetchMenu());
     // }, [])
 
     return (
