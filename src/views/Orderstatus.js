@@ -26,11 +26,11 @@ const Orderstatus = () => {
 
     return (
         <div className="orderstatus-main">
-            {/* <p className="order-nummer">#{items[t].ordernummer}</p> */}
+            <p className="order-nummer">#{items[t].ordernummer}</p>
             <img src="" alt="" />
            <h2>Din order är på väg</h2> 
            <p>Estimerad leveranstid:</p>
-            {/* <p>{items[t].ordertime}</p> */}
+            <p>{items[t].ordertime}</p>
             <button className="cool-btn">Ok, cool!</button>
         </div>
 

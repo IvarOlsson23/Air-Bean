@@ -6,8 +6,7 @@ import * as actionTypes from './types';
 
 const initState = {
     stateProducts: [
-        //hårdkodad menu
-    {
+          {
       "id": 1,
       "title": "Bryggkaffe",
       "desc": "Bryggd på månadens bönor.",
@@ -42,18 +41,10 @@ const initState = {
       "title": "Cortado",
       "desc": "Bryggd på månadens bönor.",
       "price": 39
-    }],
+    }
+    ],
     cart: [],
-    user: [
-    {
-        //Hårdkodad användare
-      "name": "testTorsdag",
-      "epost": "torsdag@test.se",
-      "id": "G4JHGNEfM2pdyxeW6XGMb",
-      "password": "9RtoWrpmXp"
-    },
-
-],
+    user: { },
 }
 
 
@@ -76,15 +67,14 @@ const Reducers = (state = initState, action) => {
         case actionTypes.SAVE_USER:
           return {
             ...state,
-            user: [...state.user, action.payload]
+            user: action.payload
           }
 
-          case actionTypes.FETCH_DATA_SUCCESS:
+          case actionTypes.FETCH_DATA:
               return {
                   ...state,
-                  stateProducts: action.payload
+                  stateProducts: [...state.stateProducts, action.payload]
               }
-
         default:
             return state;
             

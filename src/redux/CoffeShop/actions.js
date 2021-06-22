@@ -1,5 +1,5 @@
 import * as actionTypes from './types';
-import axios from 'axios';
+// import axios from 'axios';
 // import { useEffect } from 'react';
 
 export const addToCart = (itemID) => {
@@ -12,64 +12,22 @@ export const addToCart = (itemID) => {
 }
 
 
-// export const removeFromCart = (itemID) => {
-//     return {
-//         type: actionTypes.REMOVE_FROM_CART,
-//         payload: {
-//             id: itemID
-//         }
-//     }
-// }
 
-
-// export const adjustQty = (itemID, value) => {
-//     return {
-//         type: actionTypes.ADJUST_QTY,
-//         payload: {
-//             id: itemID,
-//             qty: value,
-//         }
-//     }
-// }
-
-export const saveUser = (userName) => {
+export const saveUser = (userData) => {
     return {
         type: actionTypes.SAVE_USER,
-        payload: {
-            Name: userName
-        }
+        payload: userData
     }
 }
 
 
-export const fetchDataSuccess = (data) => {
+
+export const fetchData = (data) => {
     
     return {
-        type: actionTypes.FETCH_DATA_SUCCESS,
+        type: actionTypes.FETCH_DATA,
         payload: data
         
     }
 }
 
-export const getTodos = (todos) => {
-    return {
-        type: actionTypes.FETCH_DATA_SUCCESS,
-        payload: todos
-    }
-}
-
-export const fetchData = () => {
-    
-    return (dispatch) => {
-
-        dispatch(fetchDataSuccess)
-        axios.get('http://localhost:5000/api/coffee')
-        .then(response => {
-            const data = response.data
-            dispatch(fetchDataSuccess(data))
-            console.log(data,'från actions')
-        })
-        .catch(error => {
-        })
-    }
-}

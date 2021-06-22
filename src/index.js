@@ -9,17 +9,8 @@ import {Provider} from 'react-redux';
 import store from './redux/store';
 // import {createStore} from 'redux';
 
-import { getTodos,} from '../src/redux/CoffeShop/actions'
 
-export function fetchTodos() {
-    return async dispatch => {
-        const response = await fetch('http://awesome-todo-api.herokuapp.com/tasks');
-        const data = await response.json();
-        dispatch(getTodos(data));
 
-        return data;
-    }
-}
 
 
 
