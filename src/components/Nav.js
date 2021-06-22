@@ -1,4 +1,4 @@
-import './Nav.css';
+import '../components/css/Nav.css';
 import {Link} from 'react-router-dom';
 import React, {useState, useEffect} from 'react'
 import Navlinks from './Navlinks';
@@ -36,9 +36,11 @@ const Nav = ({cart}) => {
                 {open ? closeIcon : hamburgerIcon}
                { open && <Navlinks/> }
                 <Link to="/Cart">
+                    <div>
                     <div className="cart-background" />
-                        <div className="cartCounter">{cartCounter}</div>
                         <FaShoppingCart className="cart-icon"/>
+                        <div className="cartCounter">{cartCounter}</div>
+                    </div>
                 </Link>
             </ul>
         </nav>

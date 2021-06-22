@@ -6,13 +6,12 @@
 }
 
 .cartCounter {
-  color: rgb(240, 46, 152);
+  color: rgb(247, 205, 128);
   font-size: 1.5rem;
   font-weight: 600;
   position: absolute;
   right: 5%;
   top: 2%;
-  z-index: 1;
 }
 
 .hamburger {
@@ -25,7 +24,7 @@
 }
 
 .cart-icon {
-  color: rgb(46, 46, 46);
+  color: rgb(97, 97, 97);
   font-size: 2rem;
   position: absolute;
   top: 4%;

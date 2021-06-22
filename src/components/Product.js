@@ -1,6 +1,6 @@
 // import React, {useState, useEffect} from 'react'
 // import { fetchData } from '../redux/CoffeShop/actions'
-import './Products.css'
+import '../components/css/Products.css'
 import {connect} from 'react-redux';
 import { useEffect } from 'react'
 import {addToCart} from '.././redux/CoffeShop/actions'

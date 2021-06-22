@@ -1,5 +1,5 @@
 import React from 'react'
-import './Orderstatus.css'
+import '../views/css/Orderstatus.css'
 import {useEffect, useState} from 'react'
 
 
@@ -30,7 +30,7 @@ const Orderstatus = () => {
             <img src="" alt="" />
            <h2>Din order är på väg</h2> 
            <p>Estimerad leveranstid:</p>
-            <p>{items[t].ordertime}</p>
+            {/* <p>{items[t].ordertime}</p> */}
             <button className="cool-btn">Ok, cool!</button>
         </div>
 

@@ -1,4 +1,4 @@
-import './Profil.css'
+import '../views/css/Profil.css'
 import {connect} from 'react-redux'
 import { useEffect, useState } from 'react'
 import {HiOutlineMinus} from 'react-icons/hi'

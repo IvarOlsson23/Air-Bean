@@ -3,6 +3,7 @@
   margin-top: 3rem;
   flex-direction: column;
   justify-content: space-evenly;
+  height: 80vh;
 }
 
 .avatar-icon {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './Navlinks.css';
+import '../components/css/Navlinks.css';
 import {HiOutlineMinus} from 'react-icons/hi'
 
 const Navlinks = () => {

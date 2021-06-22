@@ -1,5 +1,5 @@
 import React from 'react'
-import './Cart.css'
+import '../components/css/Cart.css'
 import axios from 'axios';
 import  {connect} from 'react-redux'
 import { useEffect,useState } from 'react';
